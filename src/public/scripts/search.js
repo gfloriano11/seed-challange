@@ -15,8 +15,18 @@ searchButton.addEventListener('click', () => {
     })
     .then(response => response.json())
     .then(data => {
+        console.log(data)
         if(data.success){
             console.log(data.message);
+            
+            data.equipments.forEach(equipment => {
+                let text = document.createElement('p');
+                text.innerText += equipment.EquipmentName
+                const body = document.querySelector('body');
+    
+                body.appendChild(text);
+            })
+
         } else {
             console.log(data.message);
         }
