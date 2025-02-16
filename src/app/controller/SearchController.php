@@ -8,10 +8,10 @@
 
             $prompt = $info['prompt'];
 
-            $search = new Search;
-            $search->search($prompt);
+            $search = Search::search($prompt);
 
             echo json_encode([
+                'equipments' => $search,
                 'success' => true,
                 'message' => 'deu boa'
             ]);
