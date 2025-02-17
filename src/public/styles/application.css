@@ -121,6 +121,17 @@
 }
 
 .product_number{
+    display: flex;
+    justify-content: center;
+    align-items: center;
     color: rgb(211, 40, 40);
     text-decoration: underline;
+}
+
+.product_name{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 250px;
+    word-wrap: unset;
 }
