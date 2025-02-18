@@ -19,34 +19,34 @@ class Search {
         }
 
         if ($data['materials']) {
-            foreach ($data['materials'] as $equipment) {
-                if (strpos(strtolower($equipment['MaterialName']), strtolower($prompt)) !== false) {
-                    $result[] = $equipment; // 
+            foreach ($data['materials'] as $materials) {
+                if (strpos(strtolower($materials['MaterialName']), strtolower($prompt)) !== false) {
+                    $result[] = $materials; // 
                 }
             }
         }
 
         if ($data['purchase_orders']) {
-            foreach ($data['purchase_orders'] as $equipment) {
-                if (strpos(strtolower($equipment['MaterialName']), strtolower($prompt)) !== false) {
-                    $result[] = $equipment; // pedido de compra
+            foreach ($data['purchase_orders'] as $purchase) {
+                if (strpos(strtolower($purchase['MaterialName']), strtolower($prompt)) !== false) {
+                    $result[] = $purchase; // pedido de compra
                 }
             }
         } 
 
 
         if ($data['sales_orders']) {
-            foreach ($data['sales_orders'] as $equipment) {
-                if (strpos(strtolower($equipment['MaterialName']), strtolower($prompt)) !== false) {
-                    $result[] = $equipment; // pedido de compra
+            foreach ($data['sales_orders'] as $sales) {
+                if (strpos(strtolower($sales['MaterialName']), strtolower($prompt)) !== false) {
+                    $result[] = $sales; // pedido de compra
                 }
             }
         } 
 
-        if ($data['sales_orders']) {
-            foreach ($data['sales_orders'] as $equipment) {
-                if (strpos(strtolower($equipment['Name']), strtolower($prompt)) !== false) {
-                    $result[] = $equipment; // pedido de compra
+        if ($data['workforce']) {
+            foreach ($data['workforce'] as $workforce) {
+                if (strpos(strtolower($workforce['Name']), strtolower($prompt)) !== false) {
+                    $result[] = $workforce; // pedido de compra
                 }
             }
         } 
