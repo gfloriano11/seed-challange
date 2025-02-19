@@ -49,7 +49,7 @@ class Search {
                     $result[] = $workforce; // pedido de compra
                 }
             }
-        } 
+        }
 
         return $result;
 
