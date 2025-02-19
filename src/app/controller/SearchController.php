@@ -11,7 +11,7 @@
             $search = Search::search($prompt);
 
             echo json_encode([
-                'equipments' => $search,
+                'result' => $search,
                 'success' => true,
                 'message' => 'deu boa'
             ]);
