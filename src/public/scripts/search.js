@@ -32,7 +32,9 @@ searchButton.addEventListener('click', () => {
                         
                         let text = document.createElement('p');
                         text.innerText += item.EquipmentName
-                        const products_container = document.querySelector('.products');
+                        const products_container = document.createElement('div');
+
+                        products_container.classList.add('result')
         
                         const product = document.createElement('div');
                         const product_number = document.createElement('p')
@@ -53,12 +55,11 @@ searchButton.addEventListener('click', () => {
                         product.appendChild(product_number);
                         product.appendChild(product_name);
                         product.appendChild(product_quantity);
-
                     }
 
                     if(item.MaterialID){
-                        ;
-                        text.innerText += item.EquipmentName
+
+                        text.innerText += item.MaterialName
                         const products_container = document.querySelector('.products');
         
                         const product = document.createElement('div');
@@ -72,8 +73,8 @@ searchButton.addEventListener('click', () => {
                         product_name.classList.add('product_name');
                         product_quantity.classList.add('product_quantity');
         
-                        product_number.innerText = '#' + item.EquipmentID;
-                        product_name.innerText = item.EquipmentName;
+                        product_number.innerText = '#' + item.MaterialID;
+                        product_name.innerText = item.MaterialName;
                         product_quantity.innerText = 'Qtd: 200 pç'
             
                         products_container.appendChild(product);
