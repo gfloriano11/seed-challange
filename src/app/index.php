@@ -17,5 +17,3 @@
     ob_end_clean();
 
     echo $result;
-
-    // var_dump($_GET);
